@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs for Skills</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="color: white;">Select Skills to Find Matching Jobs</h1>
+            <a href="/" class="home-btn"><i class="fas fa-home"></i></a>
+        </header>
+
+        <form method="POST" class="skills-form">
+            <div class="skills-checkboxes">
+                {% for skill in skills %}
+                <div class="checkbox-item">
+                    <input type="checkbox" name="skills" value="{{ skill }}" id="{{ skill }}">
+                    <label for="{{ skill }}">{{ skill }}</label>
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn creative-btn">Find Jobs</button>
+        </form>
+
+        {% if matched_jobs %}
+        <div class="jobs-card">
+            <h2>Matching Jobs</h2>
+            <ul class="jobs-list">
+                {% for job in matched_jobs %}
+                <li>
+                    <i class="fas fa-briefcase"></i> {{ job }} 
+                    <span class="additional-skills">
+                        <p>(Additional Skills: {{ additional_skills[job] | join(', ') }})</p>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

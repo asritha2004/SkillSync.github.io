@@ -1,0 +1,229 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #3498db;
+    color: #ffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.option-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+}
+
+.option-card h2 {
+    margin-bottom: 10px;
+}
+
+.option-card i {
+    font-size: 2.5rem;
+    color: #2980b9;
+}
+
+.option-card p {
+    margin-bottom: 20px;
+}
+
+.option-card .btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-card .btn:hover {
+    background-color: #2ecc71;
+}
+
+.skills-list,
+.jobs-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.skills-list li,
+.jobs-list li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.skills-list li i,
+.jobs-list li i {
+    color: #27ae60;
+    margin-right: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.job-select {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+/* Flexbox for skills checkboxes */
+.skills-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 15px); /* Adjust width based on the number of columns */
+    box-sizing: border-box;
+}
+
+.checkbox-item input {
+    margin-right: 10px;
+}
+
+/* Dynamic skill counter */
+.skill-counter {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #3498db;
+}
+
+.jobs-card,
+.skills-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 20px;
+}
+/* Home button styling */
+.home-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.home-btn:hover {
+    color: #0098f7;
+}
+
+.home-btn i {
+    margin-right: 10px;
+}
+.creative-btn {
+    background-color: #2fa34a; /* Coral color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.creative-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.75s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.creative-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.creative-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.creative-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.main-header {
+    text-align: center;
+    margin-bottom: -25px;
+    background-color: #f4f7fc;
+    margin-top: -10px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title-container i {
+    font-size: 40px;
+    color: black;
+    background-color: white;
+}
+
+.main-header h1 {
+    font-size: 48px;
+    color: black;
+    margin: 0;
+}
+
+.main-header h5 {
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+    margin-top: 10px;
+}

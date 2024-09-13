@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Job</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="home-btn"><i class="fas fa-home"></i></a>
+            <h1 style="color: white;">Select a Job to See Required Skills</h1>
+        </header>
+
+        <form method="POST" class="job-form">
+            <select name="job" class="job-select">
+                <option value="">Select a job</option>
+                {% for job in jobs %}
+                <option value="{{ job }}" {% if job == job %}selected{% endif %}>{{ job }}</option>
+                {% endfor %}
+            </select>
+            <!--<button type="submit" class="btn">Show Skills</button>-->
+            <button type="submit" class="btn creative-btn">Show Skills</button>
+
+        </form>
+
+        {% if job %}
+        <div class="skills-card">
+            <h2>Skills for {{ job }}</h2>
+            <ul class="skills-list">
+                {% for skill in skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
